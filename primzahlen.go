@@ -12,19 +12,10 @@ func Divides(m, n int) bool {
 	// Als Übungsaufgabe ersetzen Sie diese Lösung dennoch durch eine,
 	// die den Modulo-Operator nicht verwendet.
 
-	if m == 0 {
-		return false
-	}
-	if n < 0 {
-		n = -n
-	}
-	if m < 0 {
-		m = -m
-	}
-	for n >= m {
-		n -= m
-	}
-	return n == 0
+	return n%m == 0
+	// Erläuterung:
+	// Der Modulo-Operator % liefert den Rest der ganzzahligen Division n/m.
+	// Wenn dieser Rest 0 ist, dann ist n durch m teilbar.
 }
 
 // Erwartet eine Zahl n.
